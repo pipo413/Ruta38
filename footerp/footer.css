@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Inder&display=swap");
+
+:root {
+  /* Text-style */
+  --Titulos-font: "Audiowide", cursive;
+  --Text-font: "Inder", sans-serif;
+  /* letter-spacing */
+  --letter-spacing-L: 3.78rem;
+  --letter-spacing-XL-: 4.62rem;
+  --letter-spacing-S-: normal;
+
+  /* Text-size */
+  --font-size-XXL: 2.2rem;
+  --font-size-XL: 1.8rem;
+  --font-size-L: 1.6rem;
+  --font-size-XS: 1.4rem;
+
+  /* Colores */
+  --P-red: rgba(217, 30, 80, 1);
+  --P-blue: rgba(3, 76, 140, 1);
+  --P-brow: rgba(166, 89, 45, 1);
+  --P-skin: rgba(217, 178, 156, 1);
+  --P-white: rgba(255, 255, 255, 1);
+  --P-gray: rgba(140, 140, 140, 1);
+  --P-black: rgba(0, 0, 0, 1);
+  --P-orange-ligth: rgba(191, 154, 107, 1);
+  --P-orange-dark: rgba(188, 82, 19, 1);
+
+  --P-card-hover: rgba(130, 117, 117, 0.54);
+
+  /* card-border */
+  --P-card-border: 0.1rem solid rgba(0, 0, 0, 0.14);
+
+  /* pic-size */
+  --pic-size_min-heigth: 31.6rem;
+  --pic-size_min-width: 30.3rem;
+  --pic-card-radio: 1.5rem;
+} 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+/*----Titulos y texto---*/
+h1 {
+  font-family: var(--Titulos-font);
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* -----HEADER------- */
+
+.header {
+  height: 13.4rem;
+  display: grid;
+  grid-template: auto 3.4rem/ 7rem auto;
+
+  grid-template-areas:
+    "header__logo-r38  header__logo-letter"
+    "header__navbar       header__navbar        ";
+
+  background-color: red;
+}
+.header__logo-r38 {
+  grid-area: header__logo-r38;
+  background-color: blue;
+}
+.header__logo-letter {
+  grid-area: header__logo-letter;
+  background-color: violet;
+  display: grid;
+  grid-template-areas:
+    "logo-letter__title    logo-letter__title     logo-letter__title    "
+    "logo-letter__subtitle logo-letter__isotipo-t logo-letter__logotipo-t";
+}
+
+.logo-letter__title {
+  grid-area: logo-letter__title;
+  background-color: red;
+}
+.logo-letter__subtitle {
+  grid-area: logo-letter__subtitle;
+  background-color: green;
+}
+.logo-letter__isotipo-t {
+  grid-area: logo-letter__isotipo-t;
+  background-color: greenyellow;
+}
+.logo-letter__logotipo-t {
+  grid-area: logo-letter__logotipo-t;
+  background-color: goldenrod;
+}
+
+.header__navbar {
+  grid-area: header__navbar;
+  background-color: gray;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar__menu--item {
+  background-color: rgb(128, 128, 128);
+}
+
+/* -----HERO------- */
+
+.hero {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color: green;
+}
+/* HERO SLIDE CONTAINER */
+.hero__slide {
+  display: grid;
+  height: 14.8rem;
+  width: 100%;
+  background-color: pink;
+  grid-template: 3.2rem auto 3.2rem / 12.5rem auto 12.5rem;
+  grid-template-areas:
+    "rec-top . .         "
+    ".       . .         "
+    ".       . rec-bottom";
+}
+.hero__slide--rectagle {
+  background-color: var(--P-card-hover);
+}
+.rec-top {
+  grid-area: rec-top;
+  /* background-color: rgb(13, 0, 128); */
+  border-radius: 0 0 1.5rem 0;
+}
+.title-xxl {
+  background-color: rgb(0, 102, 128);
+}
+.rec-bottom {
+  grid-area: rec-bottom;
+  border-radius: 1.5rem 0 0 0;
+  /* background-color: rgb(128, 0, 111); */
+}
+
+.slide-1 {
+}
+
+.main {
+}
+.navbar {
+}
+.card {
+}
+/*A PARTIR DE AQUI COMIENZA EL FORMATEO DEL FOOTER*/
+.footer {
+  height: 16rem;
+  width: auto;
+
+}
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: var(--P-card-border);
+  border-radius: 34px;
+  justify-content: center;
+}
+.card__title {
+  width: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card__container {
+  width: auto;
+  /* display: inline-flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  margin-top: 0.5rem;
+}
+.container__items {
+  width: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  display: inline-grid;
+  height: 100px;
+}
+img{
+  height: 100px;
+}
+
+
+/*FORMATO DEL DIVISOR - COMIENZO*/
+.divisor {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+.divisor__logo {
+
+  width: 3rem;
+  height: 3.8rem;
+  background-color: var(--P-white);
+  position: absolute;
+  top: -13px;
+  left: calc(50% - 19px);
+}
+.divisor__linea {
+  width: 100%;
+  color: var(--P-gray);
+}
+/*FORMATO DEL DIVISOR- FIN*/
